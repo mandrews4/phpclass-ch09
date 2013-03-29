@@ -1,0 +1,23 @@
+P3 Rewrite customize.php so that the script also applies the user’s
+   preferences. Hint: You need to take into account the fact that the
+   cookies aren’t available immediately after they’ve been set. Instead,
+   you would write the CSS code using the $_GET values after the form has
+   been submitted, the $_COOKIE values upon first arriving at the page
+   (if the cookies exist), and the default values otherwise.
+A  See customize.php
+
+P4 Make the form in customize.php sticky, so that it reflects the user’s
+   current choices.
+A  See customize.php
+
+P5 Rewrite welcome.php so that the print statement that greets the user by
+   email address uses double quotation marks.
+A  See welcome.php
+
+P6 For an added challenge, rewrite welcome.php so that the print statement
+   that indicates how long the user has been logged in also uses double
+   quotation marks. Hint: You’ll need to use a variable.
+A  See welcome.php
+
+P7 Rewrite the last three scripts so that the session uses a custom name.
+A  See login.php, welcome.php & logout.php
