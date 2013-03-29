@@ -1,0 +1,50 @@
+Q1 Where does a cookie store data? Where does a session store data? Which
+   is generally more secure?
+A  A cookie stores data in the user's web browser, while a session stores
+   data in a file on the server.
+
+   Of the two, the session is more secure because the user's information
+   isn't transmitted back and forth between the client and server
+   repeatedly.
+
+Q2 Name two debugging techniques when trying to solve issues involving
+   cookies.
+A  Two debugging techniques to use with cookies are:
+   (1) configure the web browser to block cookies or prompt the user
+       to accept or block them from being accepted.
+   (2) Retrieve the values of the cookies from the _COOKIES[] array
+       in the PHP script and print their values using html
+
+Q3 How do the path and domain arguments to the setcookie() function
+   affect the accessibility of the cookie?
+A  Both arguments can be used to limit the availability of the cookie
+   to specific portions of a web site.
+
+   The path argument specifies the path on the server where the cookie
+   is available.
+
+   If you specify a path of "/data/", the cookie will only be available
+   in web pages whose path begin with "/data/".
+
+   If you specify a path of "/", the cookie will be available in all
+   pages served by the web server.
+
+   The domain argument specifies the domain in which the cookie is valid.
+   For example, if the cookie's domain is set to "example.com", it will be
+   available to web pages in the domain "example.com" domain and any higher
+   domains such as "www.example.com".
+
+Q4 How do you delete a cookie?
+A  You delete a cookie using the setcookie function with the same
+   arguments as when the cookie was set, except the value of the
+   cookie is a null string, "" and any timestamp argument specifies
+   a time in the past.
+
+Q5 What function must every page call if it needs to assign or access
+   session data?
+A  The session_start() function.
+
+Q6 Why do sessions also use cookies (by default)?
+A  To provide the PHP session names and values to the browser. This allows
+   the browser to perform a stateful-like conversation with the web server
+   during the lifetime of the session.
